@@ -1,44 +1,48 @@
 import javax.swing.*;
 import java.awt.*;
 
+// A class for displaying student milestone output
 public class MilestoneOutput {
-    private JFrame frame;
+    private JFrame frame; // JFrame for the main window
 
+    // Constructor that takes a Student object as input
     public MilestoneOutput(Student stud) {
-        frame = new JFrame("Milestone Output");
-        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        frame.setSize(400, 300);
+        frame = new JFrame("Milestone Output"); // Create a new JFrame with title "Milestone Output"
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); // Set default close operation
+        frame.setSize(400, 300); // Set window size
 
-        JPanel panel = new JPanel(new GridLayout(0, 2));
+        JPanel panel = new JPanel(new GridLayout(0, 2)); // Create a JPanel with grid layout
 
-        JTextField txtStudentName = new JTextField(stud.getName());
-        txtStudentName.setEditable(false);
-        JTextField txtStudentNo = new JTextField(stud.getNumber());
-        txtStudentNo.setEditable(false);
-        JTextField txtMilestone1 = new JTextField(String.valueOf(stud.getMilestone1()));
-        txtMilestone1.setEditable(false);
-        JTextField txtMilestone2 = new JTextField(String.valueOf(stud.getMilestone2()));
-        txtMilestone2.setEditable(false);
-        JTextField txtTerminalAssessment = new JTextField(String.valueOf(stud.getTerminalAssessment()));
-        txtTerminalAssessment.setEditable(false);
-        JTextField txtTotalGrade = new JTextField(String.valueOf(stud.getTotalGrade()));
-        txtTotalGrade.setEditable(false);
+        // Create JTextFields for displaying student information and milestone grades
+        JTextField txtStudentName = new JTextField(stud.getName()); // Student name
+        txtStudentName.setEditable(false); // Make it non-editable
+        JTextField txtStudentNo = new JTextField(stud.getNumber()); // Student number
+        txtStudentNo.setEditable(false); // Make it non-editable
+        JTextField txtMilestone1 = new JTextField(String.valueOf(stud.getMilestone1())); // Milestone 1 grade
+        txtMilestone1.setEditable(false); // Make it non-editable
+        JTextField txtMilestone2 = new JTextField(String.valueOf(stud.getMilestone2())); // Milestone 2 grade
+        txtMilestone2.setEditable(false); // Make it non-editable
+        JTextField txtTerminalAssessment = new JTextField(String.valueOf(stud.getTerminalAssessment())); // Terminal assessment grade
+        txtTerminalAssessment.setEditable(false); // Make it non-editable
+        JTextField txtTotalGrade = new JTextField(String.valueOf(stud.getTotalGrade())); // Total grade
+        txtTotalGrade.setEditable(false); // Make it non-editable
 
-        panel.add(new JLabel("Student Name:"));
-        panel.add(txtStudentName);
-        panel.add(new JLabel("Student Number:"));
-        panel.add(txtStudentNo);
-        panel.add(new JLabel("Milestone 1:"));
-        panel.add(txtMilestone1);
-        panel.add(new JLabel("Milestone 2:"));
-        panel.add(txtMilestone2);
-        panel.add(new JLabel("Terminal Assessment:"));
-        panel.add(txtTerminalAssessment);
-        panel.add(new JLabel("Total Grade:"));
-        panel.add(txtTotalGrade);
+        // Add labels and corresponding text fields to the panel
+        panel.add(new JLabel("Student Name:")); // Label for student name
+        panel.add(txtStudentName); // Text field for student name
+        panel.add(new JLabel("Student Number:")); // Label for student number
+        panel.add(txtStudentNo); // Text field for student number
+        panel.add(new JLabel("Milestone 1:")); // Label for milestone 1
+        panel.add(txtMilestone1); // Text field for milestone 1
+        panel.add(new JLabel("Milestone 2:")); // Label for milestone 2
+        panel.add(txtMilestone2); // Text field for milestone 2
+        panel.add(new JLabel("Terminal Assessment:")); // Label for terminal assessment
+        panel.add(txtTerminalAssessment); // Text field for terminal assessment
+        panel.add(new JLabel("Total Grade:")); // Label for total grade
+        panel.add(txtTotalGrade); // Text field for total grade
 
-        frame.add(panel);
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
+        frame.add(panel); // Add the panel to the frame
+        frame.setLocationRelativeTo(null); // Set frame location to center of screen
+        frame.setVisible(true); // Set frame location to center of screen
     }
 }
