@@ -11,6 +11,9 @@ public class MilestoneOutput {
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); // Set default close operation
         frame.setSize(400, 300); // Set window size
 
+        // Set background color of the frame's content pane to light red
+        frame.getContentPane().setBackground(new Color(255, 192, 203)); // Light Red (Pink) color
+
         JPanel panel = new JPanel(new GridLayout(0, 2)); // Create a JPanel with grid layout
 
         // Create JTextFields for displaying student information and milestone grades

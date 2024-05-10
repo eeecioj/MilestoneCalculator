@@ -50,9 +50,9 @@ public class Student {
 
     // Method to calculate total grade based on milestone and assessment grades
     private double calculateTotalGrade() {
-        double gradeMilestone1 = milestone1 * 0.25;
-        double gradeMilestone2 = milestone2 * 0.40;
-        double gradeTerminalAssessment = terminalAssessment * 0.35;
+        double gradeMilestone1 = milestone1;
+        double gradeMilestone2 = milestone2;
+        double gradeTerminalAssessment = terminalAssessment;
         return gradeMilestone1 + gradeMilestone2 + gradeTerminalAssessment;
     }
 }

@@ -51,8 +51,10 @@ public class Main {
         JButton btnCalculate = new JButton("Calculate");
 
         // Create an ActionListener for the button using CalculateButton class
-        ActionListener buttonHandler = new CalculateButton(txtMilestone1, txtMilestone2, txtTerminalAssessment, frame);
+        ActionListener buttonHandler = new CalculateButton(txtMilestone1, txtMilestone2, txtTerminalAssessment,
+                txtStudentName, txtStudentNo, frame);
         btnCalculate.addActionListener(buttonHandler);
+
 
         // Constraints for the button
         GridBagConstraints gbcButton = new GridBagConstraints();
